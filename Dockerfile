@@ -25,7 +25,7 @@ RUN sudo -u ubuntu -i bash -l -c "git  clone  https://github.com/serkanserttop/c
     chmod -R g+w /home/ubuntu/c9sdk && \
     chown -R ubuntu:ubuntu /home/ubuntu/c9sdk && \ 
     sudo -u ubuntu -i bash -l -c "cd /home/ubuntu/c9sdk; \
-                                  git checkout test-env-git; \
+                                  git checkout ss/testenv/git; \
                                   git submodule update --init; \
                                   ./scripts/install-sdk.sh;" 
 
