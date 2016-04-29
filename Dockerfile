@@ -1,7 +1,7 @@
 FROM cloud9/workspace
 MAINTAINER Serkan Serttop <serkanserttop@smartface.io>
 
-RUN echo "Version 0.1"
+RUN echo "Version 0.1.20160429"
 
 #check if Java 1.7 is installed, if not, then install
 RUN if [ $(dpkg-query -W -f='${Status}' openjdk-7-jdk 2>/dev/null | grep -c "ok installed") -eq 0 ]; \
