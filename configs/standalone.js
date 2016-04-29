@@ -32,6 +32,9 @@ module.exports = function(config, optimist) {
             .boolean("hosted")
             .describe("hosted", "Use default config of the hosted version")
             .default("hosted", false)
+            .boolean("smf")
+            .describe("smf", "Start Smartface SDK")
+            .default("smf", false)
             .describe("auth", "Basic Auth username:password")
             .describe("collab", "Whether to enable collab.")
             .default("collab", config.collab)
@@ -78,6 +81,9 @@ module.exports = function(config, optimist) {
     if (argv.hosted)
         config.client_config = "default-hosted";
     
+    if (argv.smf)
+        config.client_config = "workspace-smartface";
+        
     config.workspaceDir = baseProc;
     config.settingDir = argv["setting-path"];
     config.projectName = path.basename(baseProc);
@@ -105,7 +111,7 @@ module.exports = function(config, optimist) {
         console.log("Run using --listen localhost instead to only expose Cloud9 to localhost,");
         console.log("or use -a username:password to setup HTTP authentication\n");
     }
-    var auth = (argv.auth + "").split(":");
+    var auth = (argv.auth || ":").split(":");
 
     var plugins = [
         {
@@ -161,8 +167,19 @@ module.exports = function(config, optimist) {
                 "c9.ide.experiment": true,
                 "saucelabs.preview": true,
                 "salesforce.sync": true,
-                "salesforce.language": true
-            }
+                "salesforce.language": true,
+                "smartface.emulator": true
+            },
+            externalPlugins: [
+                "@smartface/smartface.about",
+                "@smartface/smartface.emulator",
+                "@smartface/smartface.ide.theme",
+                "@smartface/smartface.language",
+                "@smartface/smartface.publish.wizard",
+                "@smartface/smartfacecloud.updater",
+                "@smartface/smartface.welcome",
+                "@smartface/smartface.jquery"
+            ]
         },
         "./c9.preview/statics",
         "./c9.nodeapi/nodeapi",

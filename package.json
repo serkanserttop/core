@@ -10,6 +10,15 @@
         "url": "http://github.com/c9/core.git"
     },
     "dependencies": {
+        "@smartface/smartface.about": "file:/Users/serkanserttop/codespace/github.com/smartface/c9/scoped/smartface.about",
+        "@smartface/smartface.ide.theme": "file:/Users/serkanserttop/codespace/github.com/smartface/c9/scoped/smartface.ide.theme",
+        "@smartface/smartface.language": "file:/Users/serkanserttop/codespace/github.com/smartface/c9/scoped/smartface.language",
+        "@smartface/smartface.newfile": "file:/Users/serkanserttop/codespace/github.com/smartface/c9/scoped/smartface.newfile",
+        "@smartface/smartface.publish.wizard": "file:/Users/serkanserttop/codespace/github.com/smartface/c9/scoped/smartface.publish.wizard",
+        "@smartface/smartface.emulator": "file:/Users/serkanserttop/codespace/github.com/smartface/c9/scoped/smartface.emulator",
+        "@smartface/smartface.updater": "file:/Users/serkanserttop/codespace/github.com/smartface/c9/scoped/smartface.updater",
+        "@smartface/smartface.welcome": "file:/Users/serkanserttop/codespace/github.com/smartface/c9/scoped/smartface.welcome",
+        "@smartface/smartface.jquery": "file:/Users/serkanserttop/codespace/github.com/smartface/c9/scoped/smartface.jquery",
         "acorn": "2.5.2",
         "async": "^0.9.0",
         "base64id": "~0.1.0",
@@ -45,6 +54,13 @@
         "mocha": "1.8.2"
     },
     "scripts": {
+        "local-rerun": "rm -rf ./node_modules/@smartface; rm -rf ./build/standalone/skin; npm i; node server.js -p 8181 -l 0.0.0.0 -a : -w /Users/serkanserttop/codespace/github.com/smartface/c9/c9-workspace --workspacetype=smartface",
+        "local-rerun-no-rm": "node server.js -p 8181 -l 0.0.0.0 -a : -w /Users/serkanserttop/codespace/github.com/smartface/c9/c9-workspace --workspacetype=smartface",
+        "local-rerun-collab": "rm -rf ./node_modules/@smartface; rm -rf ./build/standalone/skin; npm i; node server.js -p 8181 -l 0.0.0.0 -a : -w /Users/serkanserttop/codespace/github.com/smartface/c9/c9-workspace --workspacetype=smartface --collab",
+        "local-rerun-collab-packed": "rm -rf ./node_modules/@smartface; rm -rf ./build/standalone/skin; npm i; node server.js -p 8181 -l 0.0.0.0 -a : -w /Users/serkanserttop/codespace/github.com/smartface/c9/c9-workspace --workspacetype=smartface --collab --packed=1",
+        "docker-run": "node server.js -p 8080 -l 0.0.0.0 -a : -w /home/sserttop/c9/workspace --workspacetype=smartface",
+        "local-rerun-serkan-no-rm": "node server.js -p 8181 -l 0.0.0.0 -a : -w /Users/serkanserttop/codespace/github.com/smartface/c9/c9-workspace --workspacetype=smartface",
+        "local-rerun-serkan": "rm -rf ./node_modules/@smartface; rm -rf ./build/standalone/skin; npm i; node server.js -p 8181 -l 0.0.0.0 -a : -w /Users/serkanserttop/codespace/github.com/smartface/c9/c9-workspace --workspacetype=smartface",
         "start": "node server.js"
     },
     "devDependencies": {},
