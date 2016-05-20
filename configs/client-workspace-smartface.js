@@ -51,7 +51,7 @@ module.exports = function(options) {
             }, {
                 name: "Smartface",
                 enabled: true,
-                path: "plugins/@smartface/smartface.language/SMF.json"
+                path: "plugins/@smartface/smartface.language/smartface.json"
             }]
         }, {
             packagePath: "plugins/c9.ide.terminal/terminal",
@@ -94,6 +94,8 @@ module.exports = function(options) {
             packagePath: "plugins/@smartface/smartface.emulator/main",
             staticPrefix: staticPrefix + "/plugins/@smartface/smartface.emulator",
             workspaceDir: workspaceDir
+        }, {
+            packagePath: "plugins/@smartface/smartface.analytics/index"
         }, {
             packagePath: "plugins/@smartface/smartface.newfile/newfile"
         }, {

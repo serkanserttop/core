@@ -172,11 +172,13 @@ module.exports = function(config, optimist) {
             },
             externalPlugins: [
                 "@smartface/smartface.about",
+                "@smartface/smartface.analytics",
                 "@smartface/smartface.emulator",
                 "@smartface/smartface.ide.theme",
                 "@smartface/smartface.language",
+                "@smartface/smartface.newfile",
                 "@smartface/smartface.publish.wizard",
-                "@smartface/smartfacecloud.updater",
+                "@smartface/smartface.updater",
                 "@smartface/smartface.welcome",
                 "@smartface/smartface.jquery"
             ]

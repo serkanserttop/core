@@ -11,6 +11,7 @@
     },
     "dependencies": {
         "@smartface/smartface.about": "file:/Users/serkanserttop/codespace/github.com/smartface/c9/scoped/smartface.about",
+        "@smartface/smartface.analytics": "file:/Users/serkanserttop/codespace/github.com/smartface/c9/scoped/smartface.analytics",
         "@smartface/smartface.ide.theme": "file:/Users/serkanserttop/codespace/github.com/smartface/c9/scoped/smartface.ide.theme",
         "@smartface/smartface.language": "file:/Users/serkanserttop/codespace/github.com/smartface/c9/scoped/smartface.language",
         "@smartface/smartface.newfile": "file:/Users/serkanserttop/codespace/github.com/smartface/c9/scoped/smartface.newfile",
